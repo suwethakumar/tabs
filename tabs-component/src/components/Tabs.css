@@ -1,0 +1,91 @@
+/* src/components/Tabs.css */
+
+/* Container for the tabs and content */
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to bottom right, #ffffff, #f7f7f7);
+    overflow: hidden;
+  }
+  
+  /* Tab headers at the top */
+  .tab-headers {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Individual tab header buttons */
+  .tab-header {
+    flex: 1;
+    padding: 1rem 0;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  /* Active tab with highlighted style */
+  .tab-header.active {
+    background-color: #ffffff;
+    font-weight: bold;
+    color: #007bff;
+    border-bottom: 4px solid #007bff;
+  }
+  
+  /* Hover effect for tab headers */
+  .tab-header:hover:not(.active) {
+    background-color: #eaeaea;
+    color: #333;
+  }
+  
+  /* Tab content area */
+  .tab-content {
+    padding: 2rem;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  /* Animation for smooth content display */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design - Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .tabs-container {
+      max-width: 100%;
+      margin: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+  
+    .tab-header {
+      font-size: 1rem;
+      padding: 0.75rem 0;
+    }
+  
+    .tab-content {
+      padding: 1.5rem;
+    }
+  }
+  
